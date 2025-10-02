@@ -9,6 +9,44 @@
     font-family: 'Poppins', 'Raleway', 'Lato', 'Noto Sans';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+nav a.active h4 {
+  color: #ff6600;  /* highlight color */
+  text-decoration: underline;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-theme nav a h4 {
+  color: white;
+}
+
+body.dark-theme button {
+  background-color: #333;
+  color: #fff;
+}
+
 html,
 Body {
     background-color: #ffffff;

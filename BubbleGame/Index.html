@@ -27,11 +27,59 @@
                             0
                         </div>
                     </div>
+                    <div class="elem">Level
+                        <div id="levelVal" class="box">
+                            Easy
+                        </div>
+                    </div>
                 </div>
     
                 <div id="pbtm"></div>
             </div>
         </div>
+    </div>
+
+    <!-- Game Menu Modal -->
+    <div id="gameMenu" class="modal">
+        <div class="modal-content">
+            <h2>🎮 Bubble Game Enhanced</h2>
+            <div class="menu-section">
+                <h3>Select Difficulty:</h3>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn" data-level="easy">Easy (60s)</button>
+                    <button class="difficulty-btn" data-level="medium">Medium (45s)</button>
+                    <button class="difficulty-btn" data-level="hard">Hard (30s)</button>
+                </div>
+            </div>
+            <div class="menu-section">
+                <button id="startGame" class="start-btn">Start Game</button>
+                <button id="showLeaderboard" class="menu-btn">Leaderboard</button>
+                <button id="showStats" class="menu-btn">Statistics</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboardModal" class="modal">
+        <div class="modal-content">
+            <h2>🏆 Leaderboard</h2>
+            <div id="leaderboardList"></div>
+            <button id="closeLeaderboard" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Statistics Modal -->
+    <div id="statsModal" class="modal">
+        <div class="modal-content">
+            <h2>📊 Game Statistics</h2>
+            <div id="statsContent"></div>
+            <button id="closeStats" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Power-up Display -->
+    <div id="powerupDisplay" class="powerup-display">
+        <div id="activePowerups"></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

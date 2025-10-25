@@ -1,58 +1,73 @@
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
+function init() {
+    const savedList = localStorage.getItem('List') ? JSON.parse(localStorage.getItem("List")) : [];
+    const ul = document.getElementById("myUL");
+
+   
+    savedList.forEach(itemText => {
+        const li = createListItem(itemText);
+        ul.appendChild(li);
+    });
+}
+
+
+function createListItem(text) {
+    const li = document.createElement("li");
+    li.textContent = text;
+
+    const span = document.createElement("SPAN");
     span.className = "close";
-    span.appendChild(txt);
-    myNodelist[i].appendChild(span);
+    span.textContent = "\u00D7";
+    li.appendChild(span);
+
+    return li;
 }
-
-
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-    var div = this.parentElement;
-    div.style.display = "none";
-    };
-}
-
-
-var list = document.querySelector("ul");
-list.addEventListener(
-    "click",
-    function (ev) {
-    if (ev.target.tagName === "LI") {
-        ev.target.classList.toggle("checked");
-    }
-    },
-    false
-);
 
 
 function newElement() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
+    const input = document.getElementById("myInput");
+    const inputValue = input.value.trim();
+
     if (inputValue === "") {
-    alert("You must write something!");
-    } else {
-    document.getElementById("myUL").appendChild(li);
+        alert("You must write something!");
+        return;
     }
-    document.getElementById("myInput").value = "";
 
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
+    const ul = document.getElementById("myUL");
+    const li = createListItem(inputValue);
+    ul.appendChild(li);
 
-    for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-        var div = this.parentElement;
-        div.style.display = "none";
-    };
-    }
+    input.value = "";
+
+    updateLocalStorage();
 }
+
+
+function updateLocalStorage() {
+    const listItems = document.querySelectorAll("#myUL li");
+    const items = [];
+
+    listItems.forEach(li => {
+    
+        if (!li.classList.contains("dummy") && li.style.display !== "none") {
+            items.push(li.firstChild.textContent);
+        }
+    });
+
+    localStorage.setItem("List", JSON.stringify(items));
+}
+
+
+document.getElementById("myUL").addEventListener("click", function (ev) {
+    const target = ev.target;
+
+    if (target.tagName === "LI") {
+        target.classList.toggle("checked");
+        updateLocalStorage();
+    } else if (target.classList.contains("close")) {
+        const li = target.parentElement;
+        li.style.display = "none";
+        updateLocalStorage();
+    }
+});
+document.querySelectorAll("#myUL li").forEach(li => li.classList.add("dummy"));
+init();

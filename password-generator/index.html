@@ -1,59 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Password Generator</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Password Generator</h1>
 
-      <div class="password-display">
-        <input
-          type="text"
-          id="passwordDisplay"
-          readonly
-          placeholder="Your password will appear here..."
-        />
-        <button id="copyBtn">Copy</button>
-        <button id="shuffleBtn">Shuffle</button>
-        <button id="clearBtn">Clear</button>
+    <!-- Password Display Section -->
+    <div class="password-display">
+      <input
+        type="text"
+        id="passwordDisplay"
+        readonly
+        placeholder="Your password will appear here..."
+      />
+      <div class="buttons">
+        <button id="copyBtn" title="Copy Password">Copy</button>
+        <button id="shuffleBtn" title="Shuffle Password">Shuffle</button>
+        <button id="clearBtn" title="Clear Password">Clear</button>
       </div>
-
-
-      <div class="length-control">
-        <label for="lengthSlider"
-          >Password Length: <span id="lengthValue">4</span></label>
-        <input type="range" id="lengthSlider" min="4" max="30" value="4" />
-      </div>
-
-      <div class="options">
-        <label
-          ><input type="checkbox" id="uppercase" checked /> Include Uppercase
-          (A–Z)</label
-        >
-        <label
-          ><input type="checkbox" id="lowercase" checked /> Include Lowercase
-          (a–z)</label
-        >
-        <label
-          ><input type="checkbox" id="numbers" checked /> Include Numbers
-          (0–9)</label
-        >
-        <label
-          ><input type="checkbox" id="symbols" /> Include Symbols (!@#$%)</label
-        >
-      </div>
-
-      <div class="strength-meter">
-        <div id="strengthBar" class="strength-bar">Strength</div>
-      </div>
-
-      <button id="generateBtn" class="generate-btn">Generate Password</button>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- Password Length Slider -->
+    <div class="length-control">
+      <label for="lengthSlider">
+        Password Length: <span id="lengthValue">4</span>
+      </label>
+      <input type="range" id="lengthSlider" min="4" max="30" value="4" />
+    </div>
+
+    <!-- Character Options -->
+    <div class="options">
+      <label>
+        <input type="checkbox" id="uppercase" checked />
+        Include Uppercase (A–Z)
+      </label>
+      <label>
+        <input type="checkbox" id="lowercase" checked />
+        Include Lowercase (a–z)
+      </label>
+      <label>
+        <input type="checkbox" id="numbers" checked />
+        Include Numbers (0–9)
+      </label>
+      <label>
+        <input type="checkbox" id="symbols" />
+        Include Symbols (!@#$%)
+      </label>
+    </div>
+
+    <!-- Password Strength Meter -->
+    <div class="strength-meter">
+      <div id="strengthBar" class="strength-bar">Strength</div>
+    </div>
+
+    <!-- Generate Button -->
+    <button id="generateBtn" class="generate-btn">Generate Password</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

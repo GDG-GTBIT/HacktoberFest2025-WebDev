@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 40px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ffcb2b;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #ffc107;
+  transform: scale(1.05);
+}
+
+.capsule {
+  background: rgba(255, 255, 255, 0.15);
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+.capsule:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.locked {
+  opacity: 0.7;
+}
+
+.unlocked {
+  background: #4caf50;
+  color: white;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.countdown {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  text-align: right;
+  min-width: 130px;
+}
+
+.capsule-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.capsule-buttons button {
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.capsule-buttons button:hover {
+  opacity: 0.8;
+}
+
+.capsule-buttons button:nth-child(1) { background: #ffd700; color: #000; } 
+.capsule-buttons button:nth-child(2) { background: #ff4d4d; color: #fff; } 
+.capsule-buttons button:nth-child(3) { background: #999; color: #fff; } 

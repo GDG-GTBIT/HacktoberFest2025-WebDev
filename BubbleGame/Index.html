@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubble Game</title>
+    <title>Bubble Game | HacktoberFest 2025</title>
+    <meta name="description" content="Bubble Game Enhanced - Play, track score, and compete in HacktoberFest 2025! Choose difficulty, view leaderboard, and track stats.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,38 +13,40 @@
         <div id="main">
             <div id="panel">
                 <div id="ptop">
-                  <div class="elem">Hit
-    <div id="hitVal" class="box">0</div>
-</div>
+                    <div class="elem">
+                        Hit
+                        <div id="hitVal" class="box">0</div>
+                    </div>
 
-<div class="elem">Timer
-    <div id="timerVl" class="box">60</div>
-</div>
+                    <div class="elem">
+                        Timer
+                        <div id="timerVl" class="box">60</div>
+                    </div>
 
-<div class="elem">Score
-    <div id="scoreVal" class="box">0</div>
-</div>
+                    <div class="elem">
+                        Score
+                        <div id="scoreVal" class="box">0</div>
+                    </div>
 
-<div class="elem">Level
-    <div id="levelVal" class="box">Easy</div>
-</div>
+                    <div class="elem">
+                        Level
+                        <div id="levelVal" class="box">Easy</div>
+                    </div>
 
-<div class="elem">
-    <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
-        <input id="hideScoreOnEnd" type="checkbox">
-        Hide score at end
-    </label>
-</div>
-
+                    <div class="elem">
+                        <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+                            <input id="hideScoreOnEnd" type="checkbox">
+                            Hide score at end
+                        </label>
+                    </div>
                 </div>
-    
                 <div id="pbtm"></div>
             </div>
         </div>
     </div>
 
     <!-- Game Menu Modal -->
-    <div id="gameMenu" class="modal">
+    <div id="gameMenu" class="modal" aria-hidden="true">
         <div class="modal-content">
             <h2>🎮 Bubble Game Enhanced</h2>
             <div class="menu-section">
@@ -63,7 +66,7 @@
     </div>
 
     <!-- Leaderboard Modal -->
-    <div id="leaderboardModal" class="modal">
+    <div id="leaderboardModal" class="modal" aria-hidden="true">
         <div class="modal-content">
             <h2>🏆 Leaderboard</h2>
             <div id="leaderboardList"></div>
@@ -72,7 +75,7 @@
     </div>
 
     <!-- Statistics Modal -->
-    <div id="statsModal" class="modal">
+    <div id="statsModal" class="modal" aria-hidden="true">
         <div class="modal-content">
             <h2>📊 Game Statistics</h2>
             <div id="statsContent"></div>
@@ -85,7 +88,9 @@
         <div id="activePowerups"></div>
     </div>
 
+    <!-- GSAP Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script src="script.js"></script>
 </body>
 </html>

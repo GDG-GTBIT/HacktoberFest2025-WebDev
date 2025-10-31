@@ -18,7 +18,7 @@ Click on the link to register yourself [here](https://hacktoberfest.com/auth/).
 
 - Chance to contribute to awesome open source projects
 - Engage with reputed communities
-- Get digital badages to show on your profiles after making 4 successful PRs
+- Get digital badges to show on your profiles after making 4 successful PRs
 
 ## CONTRIBUTING
 
@@ -51,7 +51,7 @@ We welcome first time contributors and open source enthusiasts. Check out our is
 <li>Mentor will review it and let you know if any changes are required and get it merged.</li>
 <li>Only the existing issues can be worked upon, contributors are not allowed to open any issues of their own.</strong></li>
 <li>After this your commit will be merged into our repository.</li>
-<li>Do-Follow Code of Conduct.</li>
+<li>Follow the Code of Conduct.</li>
 <li>Happy Coding 💻</li>
 </ul>
 
